@@ -4,15 +4,6 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-//  API key 
-const API_KEY = 'https://motivational-quotes5.p.rapidapi.com/quote?category=Appreciation';
-
-
- 
-
-
-// URL for fetching inspirational quotes from API
-const API_URL = 'https://quote-garden.herokuapp.com/api/v3/quotes/random';
 
 // A function to get a random inspirational quote
 async function getInspirationalQuote() {
