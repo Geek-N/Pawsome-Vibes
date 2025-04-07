@@ -4,7 +4,6 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-
 // A function to get a random inspirational quote
 async function getInspirationalQuote() {
   try {
