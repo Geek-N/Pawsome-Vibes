@@ -11,11 +11,12 @@
     min-height: 200vh;
     animation: fadeIn 1s ease-in;
     transition: background 0.3s, color 0.3s;
+    
   }
   /* Dark mode styles */
   body.dark-mode {
-    background: #e0ca00;
-    color: #000000;
+    background: #444242;
+    color: #ffffff;
   }
   /* Page transitions */
   @keyframes fadeIn {
@@ -43,7 +44,7 @@
   }
   /* Affirmation card */
   .card {
-    background: white;
+    background: rgb(255, 255, 255);
     border-radius: 20px;
     padding: 2rem;
     margin: 2rem auto;
@@ -104,7 +105,7 @@
   }
   /* Email signup highlight */
   .email-signup {
-    background: #FFE3E3;
+    background: #fdfdfd;
     border: 2px dashed #FF6B6B;
     padding: 1.5rem;
     border-radius: 20px;
@@ -129,6 +130,7 @@
     transform: translateX(-100%);
     animation: run 10s linear infinite;
     min-height:100px;
+    z-index: 10;
   }
   @keyframes run {
     0% { transform: translateX(0); }
@@ -155,34 +157,34 @@
   }
   
   body.dark-mode .card {
-    background: #000000;
-    color: #f0f0f0;
+    background: #117568;
+    color: #000000;
   }
   
   body.dark-mode header {
-    background: #000000;
+    background: #59ad3f;
   }
   
   body.dark-mode footer {
-    background: #000000;
+    background: #069b93;
     color: #bbb;
   }
   
   body.dark-mode .email-signup {
-    background: #000000;
-    border-color: #c90000;
+    background: #1c886d;
+    border-color: #d8db00;
     color: #ffeeee;
   }
   
   body.dark-mode input,
   body.dark-mode textarea {
-    background: #f3f3ec;
-    border-color: #ddcf05;
-    color: #fff;
+    background: #ffffff;
+    border-color: #c50000;
+    color: #fdfdfd;
   }
   
   body.dark-mode button {
-    background: #ec1102;
+    background: #9b1818;
     color: #fff;
   }
   
