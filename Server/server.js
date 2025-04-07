@@ -24,3 +24,4 @@ app.listen(PORT, async () => {
     console.error('❌ Unable to connect to the database:', error);
   }
 });
+
