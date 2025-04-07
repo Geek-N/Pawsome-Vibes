@@ -5,7 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-// A function to get a random inspirational quote
+// A function to get a random affirmation
 async function getInspirationalQuote() {
   try {
     const response = await axios.get(API_URL, {
