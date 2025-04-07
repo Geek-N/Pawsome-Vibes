@@ -1,38 +1,26 @@
 const express = require('express');
 const axios = require('axios');
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+const router = express.Router();
+const API_URL = 'https://www.affirmations.dev/';
 
-// A function to get a random inspirational quote
+// A function to get a random affirmation
 async function getAffirmation() {
   try {
-    const response = await axios.get(API_URL, {
-      headers: {
-        'Authorization': `Bearer ${API_KEY}`,
-      },
-    });
-
-    // Extract the quote text from the response
-    return response.data.data[0].quoteText;
+    const response = await axios.get(API_URL);
+    return response.data.affirmation;
   } catch (error) {
-    console.error('Error fetching quote:', error);
-    return 'Sorry, I could not fetch a quote at this time.';
+    console.error('Error fetching affirmation:', error);
+    return 'Sorry, I could not fetch a new affirmation at this time.';
   }
 }
 
-// Root route
-app.get('/', (req, res) => {
-  res.send('Welcome to the Inspirational Quote Generator!');
+
+// Affirmation route
+router.get('/quote', async (req, res) => {
+  const affirmation = await getAffirmation();
+  res.json({ quote: affirmation });
 });
 
-// Quote route
-app.get('/quote', async (req, res) => {
-  const quote = await getInspirationalQuote();
-  res.json({ quote });
-});
+module.exports = router;
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});

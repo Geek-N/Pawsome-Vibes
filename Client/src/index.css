@@ -7,15 +7,15 @@
   body {
     font-family: 'Open Sans', sans-serif;
     background: linear-gradient(135deg, #FFFAD1, #FFECD2);
-    color: #333;
+    color: #000000;
     min-height: 200vh;
     animation: fadeIn 1s ease-in;
     transition: background 0.3s, color 0.3s;
   }
   /* Dark mode styles */
   body.dark-mode {
-    background: #2A2A2A;
-    color: #F5F5F5;
+    background: #e0ca00;
+    color: #000000;
   }
   /* Page transitions */
   @keyframes fadeIn {
@@ -32,7 +32,7 @@
   header h1 {
     font-family: 'Pacifico', cursive;
     font-size: 2.5rem;
-    color: #FF6B6B;
+    color: #c90000;
     letter-spacing: 2px;
   }
   /* Bouncy header */
@@ -152,5 +152,37 @@
     width: 200px; /* Adjust the size of the dog */
     height: auto;
     transition: transform 0.2s ease; /* Optional smooth transition */
+  }
+  
+  body.dark-mode .card {
+    background: #000000;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode header {
+    background: #000000;
+  }
+  
+  body.dark-mode footer {
+    background: #000000;
+    color: #bbb;
+  }
+  
+  body.dark-mode .email-signup {
+    background: #000000;
+    border-color: #c90000;
+    color: #ffeeee;
+  }
+  
+  body.dark-mode input,
+  body.dark-mode textarea {
+    background: #f3f3ec;
+    border-color: #ddcf05;
+    color: #fff;
+  }
+  
+  body.dark-mode button {
+    background: #ec1102;
+    color: #fff;
   }
   

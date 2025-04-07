@@ -1,5 +1,4 @@
-// App.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './index.css'; // Import your styles
 
 const App = () => {
@@ -9,22 +8,45 @@ const App = () => {
   // State for the email
   const [email, setEmail] = useState("");
 
+  // State for the affirmation quote
+  const [quote, setQuote] = useState("You are doing great! Keep it up!");
+
   // Handle Dark Mode Toggle
   const handleDarkModeToggle = () => {
     setDarkMode(!darkMode);
   };
 
+  useEffect(() => {
+    document.body.classList.toggle('dark-mode', darkMode);
+  }, [darkMode]);
+  
   // Handle Email Signup
   const handleEmailSubmit = (event) => {
     event.preventDefault();
     if (email) {
       alert(`Thank you for signing up, ${email}! You'll receive daily affirmations.`);
-      setEmail(""); // Reset input field
+      setEmail(""); 
     }
   };
 
+  // Fetch new affirmation
+  const fetchNewAffirmation = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/quote");  // Update the port if needed
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      setQuote(data.quote);
+    } catch (error) {
+      console.error("Error fetching affirmation:", error);
+      setQuote("Oops! Couldn't fetch a new affirmation.");
+    }
+  };
+  
+
   return (
-    <div className={darkMode ? 'dark-mode' : ''}>
+    <div>
       {/* Header Section */}
       <header>
         <h1>Pawsome Vibes 🐶</h1>
@@ -36,8 +58,8 @@ const App = () => {
       {/* Affirmation Card */}
       <div className="card">
         <h2>Affirmation of the Day</h2>
-        <p>"You are doing great! Keep it up!"</p>
-        <button>Get New Affirmation</button>
+        <p>"{quote}"</p>
+        <button onClick={fetchNewAffirmation}>Get New Affirmation</button>
       </div>
 
       {/* Email Signup Section */}

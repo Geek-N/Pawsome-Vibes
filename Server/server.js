@@ -4,9 +4,14 @@ require('dotenv').config();
 
 const { sequelize, syncDB } = require('./models');
 
+const affirmationRoutes = require('./models/Affirmation');
+
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+
+app.use('/api',affirmationRoutes);
 
 const PORT = process.env.PORT || 5000;
 
