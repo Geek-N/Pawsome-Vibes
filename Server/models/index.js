@@ -17,6 +17,7 @@ const db = {};
 fs.readdirSync(__dirname)
   .filter((file) => file !== 'index.js') // Exclude this file from the import
   .forEach((file) => {
+    console.log('Loading model:', file); 
     const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
     db[model.name] = model;
   });
