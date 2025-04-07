@@ -10,11 +10,13 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "pg": "^8.14.1",
+    "pg-hstore": "^2.3.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "sequelize": "^6.37.7"
   },
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "MIT",
