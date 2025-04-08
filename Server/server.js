@@ -10,7 +10,11 @@ const affirmationRoutes = require('./routes/affirmationRoutes');
 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000', // Change to frontend URL in production
+  credentials: true
+}));
+
 app.use(express.json());
 
 
@@ -22,7 +26,7 @@ app.listen(PORT, async () => {
   try {
     await sequelize.authenticate();
     await syncDB();
-    console.log(`✅ Server is running on port ${PORT}`);
+    console.log(`🚀 Server is running on port ${PORT}`);
   } catch (error) {
     console.error('❌ Unable to connect to the database:', error);
   }

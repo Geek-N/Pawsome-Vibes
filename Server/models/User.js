@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
       username: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true, // Ensures usernames are unique
+        unique: true, 
       },
       password: {
         type: DataTypes.STRING,
@@ -12,11 +12,11 @@ module.exports = (sequelize, DataTypes) => {
       email: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true, // Ensures email addresses are unique
+        unique: true, // 
       },
     });
   
-    // Add any additional methods if needed, for example, to hash the password before saving
+    
     return User;
   };
   
