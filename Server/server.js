@@ -6,9 +6,6 @@ const { sequelize, syncDB } = require('./models');
 
 const affirmationRoutes = require('./routes/affirmationRoutes');
 
-
-
-
 const app = express();
 app.use(cors({
   origin: 'http://localhost:3000', // Change to frontend URL in production
