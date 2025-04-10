@@ -57,12 +57,12 @@ const Testimonies = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.6 }}
-            className="absolute inset-0 bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center justify-center text-center"
+            className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center justify-center text-center"
           >
             <img
               src={testimonies[index].img}
               alt={testimonies[index].name}
-              className="w-24 h-24 rounded-full border-4 border-pink-300 object-cover mb-4"
+              className="testimony.img"
             />
             <p className="text-xl text-gray-700 italic mb-4">"{testimonies[index].quote}"</p>
             <p className="text-pink-500 font-semibold text-lg">
