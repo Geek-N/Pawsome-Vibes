@@ -1,3 +1,4 @@
+// src/App.js
 import React, { useState, useEffect } from "react";
 import './index.css'; // Import your styles
 import Navbar from './components/Navbar';  // This should remain as is
@@ -13,7 +14,6 @@ import AboutPage from './pages/AboutPage';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
-  const [email, setEmail] = useState("");
   const [quote, setQuote] = useState("You are doing great! Keep it up!");
 
   const handleDarkModeToggle = () => {
@@ -23,14 +23,6 @@ const App = () => {
   useEffect(() => {
     document.body.classList.toggle('dark-mode', darkMode);
   }, [darkMode]);
-
-  const handleEmailSubmit = (event) => {
-    event.preventDefault();
-    if (email) {
-      alert(`Thank you for signing up, ${email}! You'll receive daily affirmations.`);
-      setEmail("");
-    }
-  };
 
   const fetchNewAffirmation = async () => {
     try {
@@ -52,21 +44,6 @@ const App = () => {
         {/* Navbar Section */}
         <Navbar onToggle={handleDarkModeToggle} isDarkMode={darkMode} />
 
-         {/* Sign-up Card Section */}
-         <div className="email-signup">
-          <h2>Sign up for daily affirmations!</h2>
-          <form onSubmit={handleEmailSubmit}>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <button type="submit">Sign Up</button>
-          </form>
-        </div>
-
-
         {/* Card with Button for Affirmations */}
         <div className="card">
           <h2>Today's Affirmation</h2>
@@ -79,7 +56,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/affirmations" element={<AffirmationPage />} />
           <Route path="/dog-images" element={<DogImagesPage />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signup" element={<SignUp />} /> {/* Route to SignUp page */}
           <Route path="/testimonies" element={<Testimonies />} />
           <Route path="/aboutus" element={<AboutPage />} />
         </Routes>
@@ -94,3 +71,4 @@ const App = () => {
 };
 
 export default App;
+
