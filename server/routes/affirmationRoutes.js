@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 
-const Affirmation = require('../models/Affirmation');
+const {Affirmation} = require('../models');
 
 const router = express.Router();
 const API_URL = 'https://www.affirmations.dev/';
