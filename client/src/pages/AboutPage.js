@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import './AboutPage.css';
+import '../AboutPage.css';
 
 const dogImages = [
   '/images/dogs/beagle.png',
