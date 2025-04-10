@@ -1,16 +1,16 @@
 // src/App.js
 import React, { useState, useEffect } from "react";
-import './index.css'; // Import your styles
-import Navbar from './components/Navbar';  // This should remain as is
+import './index.css'; // Import styles
+import Navbar from './components/Navbar';  // Import navigation bar
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Correct import paths for Pages
-import SignUp from './pages/SignUp';
+import Home from './pages/Home';  // Assuming Home.js is in the /pages folder
 import AffirmationPage from './pages/AffirmationPage';
 import DogImagesPage from './pages/DogImagesPage';
-import Home from './pages/Home';  // Assuming Home.js is in the /pages folder
 import Testimonies from './pages/Testimonies';
 import AboutPage from './pages/AboutPage';
+import SignUp from './pages/SignUp';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -56,9 +56,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/affirmations" element={<AffirmationPage />} />
           <Route path="/dog-images" element={<DogImagesPage />} />
-          <Route path="/signup" element={<SignUp />} /> {/* Route to SignUp page */}
           <Route path="/testimonies" element={<Testimonies />} />
           <Route path="/aboutus" element={<AboutPage />} />
+          <Route path="/signup" element={<SignUp />} /> {/* Route to SignUp page */}
         </Routes>
 
         {/* Footer */}

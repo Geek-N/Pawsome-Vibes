@@ -1,6 +1,7 @@
 // src/pages/AffirmationPage.js
 import React, { useState, useEffect } from "react";
 import { fetchAffirmation } from '../services/mockData';  // Import the fetchAffirmation function
+import '../styles/AffirmationPage.css';
 
 const AffirmationPage = () => {
   const [quote, setQuote] = useState("");
@@ -16,7 +17,7 @@ const AffirmationPage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="text">
       <h1>Affirmation of the Day</h1>
       <p>{quote}</p>
     </div>
