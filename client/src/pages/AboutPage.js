@@ -13,6 +13,10 @@ import dog07 from '../assets/dog07.jpg';
 import dog08 from '../assets/dog08.jpg';
 import dog09 from '../assets/dog09.jpg';
 import dog10 from '../assets/dog10.jpg';
+import dog11 from '../assets/dog11.jpg';
+import dog12 from '../assets/dog12.jpg';
+import dog13 from '../assets/dog13.jpg';
+import dog14 from '../assets/dog14.jpg';
 
 const dogImages = [
   { src: dog01, name: 'Ted' },
@@ -25,6 +29,10 @@ const dogImages = [
   { src: dog08, name: 'Cowboy Jones' },
   { src: dog09, name: 'Voldemort' },
   { src: dog10, name: 'Shy Guy' },
+  { src: dog11, name: 'Daisy' },
+  { src: dog12, name: 'Sachin' },
+  { src: dog13, name: 'Michael' },
+  { src: dog14, name: 'Kratos' },
 ];
 
 const AboutPage = () => {

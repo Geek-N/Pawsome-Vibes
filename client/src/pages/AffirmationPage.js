@@ -1,25 +1,26 @@
-// src/pages/AffirmationPage.js
-import React, { useState, useEffect } from "react";
-import { fetchAffirmation } from '../services/mockData';  // Import the fetchAffirmation function
+import React from "react";
 import '../styles/AffirmationPage.css';
 
 const AffirmationPage = () => {
-  const [quote, setQuote] = useState("");
-
-  useEffect(() => {
-    // Use async/await to fetch the affirmation
-    const getAffirmation = async () => {
-      const randomAffirmation = await fetchAffirmation();  // Wait for the promise to resolve
-      setQuote(randomAffirmation);
-    };
-    
-    getAffirmation();  // Call the async function to get the affirmation
-  }, []);
+  const affirmations = [
+    "You're pawsitively amazing!",
+    "You’ve got the bark AND the bite – go get ‘em!",
+    "Every doggone day, you're getting more awesome.",
+    "Who’s a good human? You are!",
+    "You shine brighter than a freshly cleaned food bowl.",
+    "Your vibe is wag-worthy!"
+  ];
 
   return (
     <div className="text">
-      <h1>Affirmation of the Day</h1>
-      <p>{quote}</p>
+      <h1>Affirmations of the Day</h1>
+      <ul className="affirmation-list">
+        {affirmations.map((quote, index) => (
+          <li key={index} className="affirmation-item">
+            {quote}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
