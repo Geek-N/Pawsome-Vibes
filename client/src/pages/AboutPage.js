@@ -72,7 +72,7 @@ const AboutPage = () => {
             key={index}
             src={src}
             alt={`Dog ${index + 1}`}
-            className="dog-img"
+            className="about-dog-img"
             whileHover={{ scale: 1.1 }}
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
