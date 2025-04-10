@@ -198,4 +198,9 @@
     background: #9b1818;
     color: #fff;
   }
-  
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 10px;
+  }
+}
