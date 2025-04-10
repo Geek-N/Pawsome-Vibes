@@ -4,11 +4,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0 20px;
   background-color: #974120; /* Navbar color */
 }
 
-.navbar-logo h1 {
+/* .navbar-logo h1 {
+  color: white;
+  font-size: 24px;
+} */
+
+.navbar-logo {
   color: white;
   font-size: 24px;
 }
@@ -19,7 +24,8 @@
 }
 
 .navbar-links li {
-  margin: 0 15px;
+  /* margin: 0 15px; */
+  padding: 15px;
 }
 
 .navbar-links li:hover {
@@ -41,4 +47,8 @@
 
 body.dark-mode .navbar {
   background-color: #000000;
+}
+
+body.dark-mode .navbar-links li:hover {
+  background-color: rgb(87, 87, 87);
 }
