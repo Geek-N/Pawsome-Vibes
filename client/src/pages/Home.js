@@ -18,7 +18,7 @@ function Home() {
   return (
     <div style={{ textAlign: "center", padding: "20px" }}>
       <h1>🐶 Pawsome Vibes 🚀</h1>
-      
+
       <h2>Daily Affirmations</h2>
       {affirmations.length > 0 ? (
         affirmations.map((affirmation) => <Affirmation key={affirmation.id} text={affirmation.text} />)
