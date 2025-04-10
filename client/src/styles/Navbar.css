@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  background-color: #974120; /* Navbar color */
+  background-color: #ff69b4; /* Navbar color */
 }
 
 /* .navbar-logo h1 {
@@ -29,7 +29,7 @@
 }
 
 .navbar-links li:hover {
-  background-color: rgb(172, 102, 33);
+  background-color: rgb(255, 146, 237);
 }
 
 .navbar-links a {
@@ -38,8 +38,8 @@
 }
 
 .navbar-toggle {
-  background-color: #00e000;
-  color: #008c4b; /* was #00b15e; */
+  background-color: #f6ff78;
+  color: black;
   border: none;
   padding: 8px 16px;
   cursor: pointer;

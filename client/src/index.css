@@ -85,7 +85,7 @@
     transition: background 0.3s ease, transform 0.2s ease;
   }
   button:hover {
-    background: #F06595;
+    background: #9bff4a;
     transform: scale(1.05);
   }
   /* Form styling */
