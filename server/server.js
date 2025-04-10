@@ -8,6 +8,14 @@ const affirmationRoutes = require('./routes/affirmationRoutes');
 
 const app = express();
 
+app.use((req, res, next) => {
+  res.setHeader(
+    'Content-Security-Policy', 
+    "default-src 'none'; img-src 'self' https://pawsome-vibes-5it8.onrender.com; script-src 'self'; style-src 'self';"
+  );
+  next();
+});
+
 // Enable CORS
 app.use(cors({
   origin: 'http://localhost:3000',
