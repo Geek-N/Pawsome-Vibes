@@ -1,20 +1,29 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../styles/AboutPage.css';
 
+import dog01 from '../assets/dog01.jpg';
+import dog02 from '../assets/dog02.jpg';
+import dog03 from '../assets/dog03.jpg';
+import dog04 from '../assets/dog04.jpg';
+import dog05 from '../assets/dog05.jpg';
+import dog06 from '../assets/dog06.jpg';
+import dog07 from '../assets/dog07.jpg';
+import dog08 from '../assets/dog08.jpg';
+import dog09 from '../assets/dog09.jpg';
+import dog10 from '../assets/dog10.jpg';
+
 const dogImages = [
-  '/images/dogs/beagle.png',
-  '/images/dogs/golden-retriever.png',
-  '/images/dogs/french-bulldog.png',
-  '/images/dogs/dalmatian.png',
-  '/images/dogs/corgi.png',
-  '/images/dogs/husky.png',
-  '/images/dogs/shiba.png',
-  '/images/dogs/chihuahua.png',
-  '/images/dogs/pug.png',
-  '/images/dogs/bernese.png'
-];
+  dog01,
+  dog02,
+  dog03,
+  dog04,
+  dog05,
+  dog06,
+  dog07,
+  dog08,
+  dog09,
+  dog10];
 
 const AboutPage = () => {
   return (
