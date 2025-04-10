@@ -5,6 +5,7 @@ const SignUp = () => {
     <div>
       <h2>Sign UP here bbygirl</h2>
       <p>This is a page about the app.</p>
+      
     </div>
   );
 };
