@@ -1,12 +1,13 @@
 import React from 'react';
 
-const AboutPage = () => {
+const SignUp = () => {
   return (
     <div>
-      <h2>About Us</h2>
+      <h2>Sign UP here bbygirl</h2>
       <p>This is a page about the app.</p>
+      
     </div>
   );
 };
 
-export default AboutPage;
+export default SignUp;
