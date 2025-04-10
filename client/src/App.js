@@ -9,6 +9,7 @@ import AffirmationPage from './pages/AffirmationPage';
 import DogImagesPage from './pages/DogImagesPage';
 import Home from './pages/Home';  // Assuming Home.js is in the /pages folder
 import Testimonies from './pages/Testimonies';
+import AboutPage from './pages/AboutPage';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -33,7 +34,7 @@ const App = () => {
 
   const fetchNewAffirmation = async () => {
     try {
-      const response = await fetch("http://localhost:5000/quote");
+      const response = await fetch('http://localhost:5000/api/affirmations/quote');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -80,6 +81,7 @@ const App = () => {
           <Route path="/dog-images" element={<DogImagesPage />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/testimonies" element={<Testimonies />} />
+          <Route path="/aboutus" element={<AboutPage />} />
         </Routes>
 
         {/* Footer */}
