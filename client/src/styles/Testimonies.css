@@ -1,63 +1,67 @@
 .testimonies-container {
-    min-height: 100vh;
-    background-color: #fefcbf; /* Tailwind's yellow-100 equivalent */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-  }
-  
-  .testimonies-wrapper {
-    max-width: 36rem;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .testimony-card {
-    position: absolute;
-    inset: 0;
-    background-color: white;
-    border-radius: 1rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  min-height: 100vh;
+  background-color: #fefcbf; /* Tailwind's yellow-100 equivalent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
 
-  .testimony-new {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .testimony-img {
-    width: 6rem;
-    height: 6rem;
-    object-fit: cover;
-    border-radius: 9999px;
-    border: 4px solid #fbb6ce; /* pink-300 */
-  }
-  
-  .button-group {
-    display: flex;
-    margin-top: 1.5rem;
-    gap: 1rem;
-    justify-content: center;
-  }
-  
-  .nav-button {
-    background-color: #fbb6ce;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .nav-button:hover {
-    background-color: #f687b3; /* pink-400 */
-  }
+.testimonies-wrapper {
+  max-width: 36rem;
+  width: 100%;
+  text-align: center;
+}
+
+.testimony-card {
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimony-new {
+  /* flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  position: relative;
+  margin-left: 30%;
+  width: 1000px;
+}
+
+.testimony-img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 9999px;
+  border: 4px solid #fbb6ce; /* pink-300 */
+}
+
+.button-group {
+  margin-left: 20%;
+  /* display: flex; */
+  margin-top: 1.5rem;
+  gap: 1rem;
+  /* justify-content: center; */
+}
+
+.nav-button {
+  background-color: #fbb6ce;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #f687b3; /* pink-400 */
+}

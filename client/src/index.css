@@ -44,15 +44,26 @@
   }
   /* Affirmation card */
   .card {
+    position: relative;
+    text-align: center;
     background: rgb(255, 255, 255);
     border-radius: 20px;
-    padding: 2rem;
+    padding: 1rem;
     margin: 2rem auto;
     width: 90%;
-    max-width: 600px;
+    max-width: 500px;
+    height: 200px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: slideIn 0.8s ease;
+  }
+  .card p {
+    padding: 2rem;
+  }
+  .card button {
+    position: absolute;
+    left: 29%; /* left: 144px; */
+    bottom: 20px;
   }
   .card:hover {
     transform: translateY(-5px) scale(1.01);

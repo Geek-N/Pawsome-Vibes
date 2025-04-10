@@ -1,9 +1,10 @@
 import React from 'react';
+import '../styles/DogImagesPage.css';
 
 const DogImagesPage = () => {
   return (
-    <div className="dog-images-page">
-      <h2>Dog Images</h2>
+    <div className="text">
+      <h1>Dog Images</h1>
       {/* Render your dog images here */}
     </div>
   );
