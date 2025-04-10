@@ -16,6 +16,9 @@ app.use(express.static('../client/build'));
 
 app.use(express.json());
 
+const userRoutes = require('./routes/userRoutes');
+app.use('/api/users', userRoutes);
+
 
 app.use('/api/affirmations', affirmationRoutes);
 

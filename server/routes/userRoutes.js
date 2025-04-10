@@ -1,15 +1,11 @@
+
+
+module.exports = router;
 const express = require('express');
 const router = express.Router();
+const { signup, login } = require('../controllers/userController');
 
-// Placeholder route for user authentication (or other user-related routes)
-router.post('/login', (req, res) => {
-  // Implement login logic here
-  res.send('User login route');
-});
-
-router.post('/signup', (req, res) => {
-  // Implement signup logic here
-  res.send('User signup route');
-});
+router.post('/signup', signup);
+router.post('/login', login);
 
 module.exports = router;
