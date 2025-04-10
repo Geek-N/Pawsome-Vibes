@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+
 import '../styles/AboutPage.css';
 
 import dog01 from '../assets/dog01.jpg';
@@ -14,16 +15,17 @@ import dog09 from '../assets/dog09.jpg';
 import dog10 from '../assets/dog10.jpg';
 
 const dogImages = [
-  dog01,
-  dog02,
-  dog03,
-  dog04,
-  dog05,
-  dog06,
-  dog07,
-  dog08,
-  dog09,
-  dog10];
+  { src: dog01, name: 'Ted' },
+  { src: dog02, name: 'Rocket' },
+  { src: dog03, name: "Rocket's Twin" },
+  { src: dog04, name: 'Leslie' },
+  { src: dog05, name: 'Baby Girl' },
+  { src: dog06, name: 'Max' },
+  { src: dog07, name: 'Beefcake' },
+  { src: dog08, name: 'Cowboy Jones' },
+  { src: dog09, name: 'Voldemort' },
+  { src: dog10, name: 'Shy Guy' },
+];
 
 const AboutPage = () => {
   return (
@@ -63,23 +65,54 @@ const AboutPage = () => {
         animate={{ scale: 1 }}
         transition={{ delay: 2, duration: 0.5 }}
       >
-        Welcome to the pack 💛🐶
+        Welcome to the pack 
       </motion.h2>
 
       <div className="dog-row">
-        {dogImages.map((src, index) => (
-          <motion.img
+        {dogImages.map((dog, index) => (
+          <motion.div
             key={index}
-            src={src}
-            alt={`Dog ${index + 1}`}
-            className="about-dog-img"
-            whileHover={{ scale: 1.1 }}
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 2 + index * 0.1 }}
-          />
+            className="dog-image-card"
+            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 + index * 0.2, duration: 0.5 }}
+          >
+            <img src={dog.src} alt={'Dog ${index + 1}'} className="about-dog-img" />
+            <motion.div
+              className="dog-hover-overlay"
+              whileHover={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <p>{dog.name}</p>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
+
+      {/* Section for dog images moving from left to right at the bottom */}
+      <motion.div
+        className="dog-images-moving"
+        initial={{ x: '-100%' }}
+        animate={{ x: '100%' }}
+        transition={{
+          repeat: Infinity,  // Loop the animation
+          repeatType: 'loop',
+          duration: 10,  // Speed of movement
+          ease: 'linear',  // Smooth linear movement
+        }}
+      >
+        {dogImages.map((dog, index) => (
+          <motion.div key={index} className="dog-moving-img-container">
+            <motion.img
+              src={dog.src}
+              alt={'Moving Dog ${index + 1}'}
+              className="dog-moving-img"
+            />
+            <p className="dog-name">{dog.name}</p>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };
