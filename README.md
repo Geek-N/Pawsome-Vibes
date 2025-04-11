@@ -56,7 +56,7 @@ The UI is:
 - Accessible and responsive for all screen sizes
 ---
 ## :rocket: Deployment
-- :link: [Live App on Render](https://pawsome-vibes-5it8.onrender.com)
+- :link: [Live App on Render](https://pawsome-vibes.onrender.com/)
 - :open_file_folder: [GitHub Repo](https://github.com/Geek-N/Pawsome-Vibes)
 ---
 ## :card_index_dividers: Folder Structure
