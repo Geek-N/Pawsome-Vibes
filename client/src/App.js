@@ -26,7 +26,7 @@ const App = () => {
 
   const fetchNewAffirmation = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/affirmations/quote');
+      const response = await fetch('/api/affirmations/quote');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
