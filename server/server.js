@@ -56,7 +56,7 @@ app.post('/send-email', async (req, res) => {
 
 // Affirmation routes (example)
 app.use('/api/affirmations', affirmationRoutes);
-
+app.use(express.static('../client/build'));
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, async () => {
@@ -68,4 +68,3 @@ app.listen(PORT, async () => {
     console.error('❌ Unable to connect to the database:', error);
   }
 });
-
