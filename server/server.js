@@ -11,7 +11,7 @@ const app = express();
 app.use((req, res, next) => {
   res.setHeader(
     'Content-Security-Policy', 
-    "default-src 'none'; img-src 'self' https://pawsome-vibes-5it8.onrender.com; script-src 'self'; style-src 'self';"
+    "default-src 'self'; img-src 'self' https://pawsome-vibes-5it8.onrender.com; script-src 'self'; style-src 'self';"
   );
   next();
 });
