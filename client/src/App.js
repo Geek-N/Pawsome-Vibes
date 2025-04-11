@@ -26,11 +26,12 @@ const App = () => {
 
   const fetchNewAffirmation = async () => {
     try {
-      const response = await fetch('/api/affirmations/quote');
+      const response =   await fetch('/api/affirmations/quote');
+      console.log(response.json());
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      const data = await response.json();
+      // const data = await response.json();
       setQuote(data.quote);
     } catch (error) {
       console.error("Error fetching affirmation:", error);
