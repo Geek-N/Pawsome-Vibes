@@ -25,6 +25,9 @@ router.get('/quote', async (req, res) => {
     // Save the affirmation in the database
     try {
       const affirmation = await Affirmation.create({ text: affirmationText });
+
+      console.log(affirmation);
+      
       res.json({ quote: affirmation.text }); // Returning the affirmation text after saving
     } catch (error) {
       console.error('Error saving affirmation:', error);
